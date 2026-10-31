@@ -4,6 +4,8 @@ import {
   getCourse,
   postCourse,
   putCourse,
+  putCourseTeacher,
+  addstudent,
   deleteCourse,
 } from "../controllers/coursesController.js";
 
@@ -15,7 +17,11 @@ coursesRouter.get("/:id", getCourse);
 
 coursesRouter.post("/", postCourse);
 
-coursesRouter.put("/:id", putCourse);
+coursesRouter.put("/course/:id", putCourse);
+
+coursesRouter.put("/teacher/:id", putCourseTeacher);
+
+coursesRouter.post("/addStudents", addstudent);
 
 coursesRouter.delete("/:id", deleteCourse);
 

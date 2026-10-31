@@ -43,10 +43,10 @@ export const getTeacher = async (req, res) => {
 };
 
 export const postTeacher = async (req, res) => {
-  const { teacher_name, house, starting_year } = req.body;
+  const { teacher_name, house } = req.body;
 
   try {
-    const teacher = await createTeacher(teacher_name, house, starting_year);
+    const teacher = await createTeacher(teacher_name, house);
 
     res.status(201).json(teacher);
   } catch (err) {
@@ -61,10 +61,10 @@ export const postTeacher = async (req, res) => {
 
 export const putTeacher = async (req, res) => {
   const id = req.params.id;
-  const { teacher_name, house, starting_year } = req.body;
+  const { teacher_name, house } = req.body;
 
   try {
-    const teacher = await updateTeacher(id, teacher_name, house, starting_year);
+    const teacher = await updateTeacher(id, teacher_name, house);
 
     if (!teacher) {
       return res.status(404).json({

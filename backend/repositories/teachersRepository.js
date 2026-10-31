@@ -44,14 +44,13 @@ export const createTeacher = async (teacher_name, house, starting_year) => {
   return result.rows[0];
 };
 
-export const updateTeacher = async (id, teacher_name, house, starting_year) => {
+export const updateTeacher = async (id, teacher_name, house) => {
   const result = await pool.query(
     `UPDATE hogwarts.teachers
      SET teacher_name = $2,
          house = $3,
-         starting_year = $4
      WHERE id = $1
-     RETURNING id, teacher_name, house, starting_year`,
+     RETURNING id, teacher_name, house`,
     [id, teacher_name, house, starting_year],
   );
 
@@ -61,8 +60,7 @@ export const updateTeacher = async (id, teacher_name, house, starting_year) => {
 export const deleteTeacherFromDB = async (id) => {
   const result = await pool.query(
     `DELETE FROM hogwarts.teachers
-     WHERE id = $1
-     RETURNING id, teacher_name, house, starting_year`,
+     WHERE id = $1`,
     [id],
   );
 
