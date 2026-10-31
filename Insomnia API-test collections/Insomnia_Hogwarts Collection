@@ -1,0 +1,478 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Hogwarts
+meta:
+  id: wrk_c30a33aba7b246bb866cbcc14529c7eb
+  created: 1788857141272
+  modified: 1792414290767
+  description: ""
+collection:
+  - name: Students
+    meta:
+      id: fld_ca978b08de974e57a4df2fecdb03e498
+      created: 1792930509772
+      modified: 1792930509772
+      sortKey: -1792930509772
+      description: ""
+    children:
+      - url: http://localhost:3000/students
+        name: Students
+        meta:
+          id: req_afea8a8e9cd845998d4db11a05070f2f
+          created: 1789731888815
+          modified: 1792930600776
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513224
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/students/1
+        name: Students by id
+        meta:
+          id: req_e1468d5f286a4a658961c7d241a1f9a9
+          created: 1792415954877
+          modified: 1793201825760
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513199
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/students/5
+        name: Update Student by id
+        meta:
+          id: req_507a551516d64296ab7368d2a107b044
+          created: 1792930538384
+          modified: 1793202374365
+          isPrivate: false
+          description: ""
+          sortKey: -1792673015286
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "student_name": "Megan Jones",
+              "house": 4,
+              "starting_year": 1991
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/students/1
+        name: Delete Student by id
+        meta:
+          id: req_29bc5dcf64694cfab80b7e9d797b1f71
+          created: 1792930562376
+          modified: 1792930582924
+          isPrivate: false
+          description: ""
+          sortKey: -1792801764205
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/students
+        name: Create Student
+        meta:
+          id: req_83387548aacc4dada9346d0df3d5aa67
+          created: 1792930614791
+          modified: 1792933249734
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513174
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "student_name": "Lierua Fameslayer",
+              "house": 2,
+              "starting_year": 1991
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Teachers
+    meta:
+      id: fld_ba9c368f869b4bf4911a660fa8d0f993
+      created: 1792930895747
+      modified: 1792930895747
+      sortKey: -1792930509722
+      description: ""
+    children:
+      - url: http://localhost:3000/teachers/5
+        name: Delete Teachers by id
+        meta:
+          id: req_70b4e5544b7b4cbca40144568063bf07
+          created: 1792930895747
+          modified: 1793478671366
+          isPrivate: false
+          description: ""
+          sortKey: -1792801764205
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/teachers/2
+        name: Teachers by id
+        meta:
+          id: req_75ca7d7f00164ea8894c94c0b921e164
+          created: 1792930895747
+          modified: 1793201826946
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513199
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/teachers
+        name: Teachers
+        meta:
+          id: req_8f45375a8fd64800a9104461c5edfd73
+          created: 1792930895747
+          modified: 1792930935166
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513224
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/teachers
+        name: Create Teachers
+        meta:
+          id: req_921c3209114541e9af49d1c61f7e0348
+          created: 1792930895747
+          modified: 1793481150489
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513174
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "teacher_name": "Cedric Diggory",
+              "house": 4
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/teachers/5
+        name: Update Teachers by id
+        meta:
+          id: req_dbb3b3f96b3b43b8822615b1fbfa2663
+          created: 1792930895747
+          modified: 1792934194148
+          isPrivate: false
+          description: ""
+          sortKey: -1792673015286
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "teacher_name": "Gilderoy Lockhart",
+              "house": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Courses
+    meta:
+      id: fld_df998a84a470492c8328916f37ad7df6
+      created: 1792930971212
+      modified: 1792930971212
+      sortKey: -1792930509672
+      description: ""
+    children:
+      - url: http://localhost:3000/courses
+        name: Create Courses
+        meta:
+          id: req_1e96a212b32c4e47a3aff543581d9eb7
+          created: 1792930971212
+          modified: 1793481193628
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513174
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "course": "",
+              "teacher": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/courses
+        name: Courses
+        meta:
+          id: req_416291235c0c433cb0bfeda6a59cac41
+          created: 1792930971212
+          modified: 1792931015848
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513224
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/courses/1
+        name: Delete Courses by id
+        meta:
+          id: req_55a438d50ee54d90bb580dd8ce2436dc
+          created: 1792930971212
+          modified: 1792931007598
+          isPrivate: false
+          description: ""
+          sortKey: -1792801764205
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/courses/1
+        name: Courses by id
+        meta:
+          id: req_5c5ba887363c49519d54ce39661ac3b3
+          created: 1792930971212
+          modified: 1793201828505
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513199
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/courses/1
+        name: Update Course name by id
+        meta:
+          id: req_846ed5649654411ca86bd8d449af26b5
+          created: 1792930971212
+          modified: 1793481956528
+          isPrivate: false
+          description: ""
+          sortKey: -1792673015286
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "course": "",
+              "teacher": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/courses/addStudents
+        name: Add Student to Courses
+        meta:
+          id: req_ecce8724b8c441c69c8378592002dbe9
+          created: 1793386403731
+          modified: 1793386527539
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513149
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "course_fk": 2,
+              "student_fk": 4
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/courses/1
+        name: Update Teacher at Courses by id
+        meta:
+          id: req_159ee24ac4f5483187441aa297fad2c4
+          created: 1793481947259
+          modified: 1793481947259
+          isPrivate: false
+          description: ""
+          sortKey: -1792673015236
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "course": "",
+              "teacher": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Houses
+    meta:
+      id: fld_95c2d430bf574101ab350c5bc391217d
+      created: 1792931026602
+      modified: 1792931026602
+      sortKey: -1792930509622
+      description: ""
+    children:
+      - url: http://localhost:3000/houses
+        name: Houses
+        meta:
+          id: req_d0c3ae3842dc4370bc210ee555699925
+          created: 1792931026602
+          modified: 1792931069737
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513224
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/houses/1
+        name: Houses by id
+        meta:
+          id: req_de3a4651479c4a689ff72fac913da3f2
+          created: 1792931026602
+          modified: 1792931074034
+          isPrivate: false
+          description: ""
+          sortKey: -1792930513124
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8df22ef7c5b191bc8f5d4aba3b1bc8cd743d9ab9
+    created: 1789729810283
+    modified: 1789729810283
+environments:
+  name: Base Environment
+  meta:
+    id: env_8df22ef7c5b191bc8f5d4aba3b1bc8cd743d9ab9
+    created: 1788857141274
+    modified: 1789729810224
+    isPrivate: false
